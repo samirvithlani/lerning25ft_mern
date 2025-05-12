@@ -1,0 +1,125 @@
+MERN: 
+m mongo db
+e express 
+r react js
+n nodejs
+
+preq: HTMl, css, JS
+
+js: json ,array,string
+
+promise,hoc(call back)
+async awit
+
+r react js
+C,CPP,java, advace java jsp-servel
+
+MVC Arch: 1 tech 
+jsp-servelt
+php  : 
+.net :
+
+FACEBOOK : PHP
+
+frontend : PHP
+backend  : PHP
+
+N tire application:
+frontend : react js angular js
+backedn  : java,node,python 
+databse  :
+
+MERN
+spring boot  + react
+FARM : fast api react
+
+
+javascript:
+javascript:
+
+framework:
+
+framework will provide you common logics:
+form : name id class ---> javascript
+bus : 
+
+database : 12 15: fw
+
+business logic: query
+
+frontend: react js,angular....
+backend : spring boot, nodejs, Django fast api..
+
+framework: protocol fixed
+	 : erros
+
+library: protocol fixed not
+	core 
+	
+
+REACT JS: FACEBOOK now meta
+
+
+d:
+ projects
+   fasttrack2025mern  select path cmd
+	npm create vite:
+		learning25ft
+		   react
+                     javascript
+		       cd learning25ft
+			npm install
+                           code .
+			go to terminal opt:
+				new terminal
+				 change profile to cmd
+				  npm run dev
+			
+
+server start:
+package.json
+
+index.html:
+	main.jsx --> app.jsx
+		
+
+
+
+
+npm: node package manager:	
+node_modules
+
+JDK --> JAR  --> pacakges --> classes --> methods
+NODE [npm] --> node_modules --> packages --> .js | .ts --> functions
+	
+vite:
+vite react js framework:
+
+
+REACT JS : single page application
+html : 
+ -->.js
+        -->.jsx
+        -->.ts
+        -->.tsx
+
+componnet: componnet based arch
+        :we can create 2 type of componnet
+        1)class based
+        2)function based 16.x
+        
+
+functions:
+
+src: components
+
+component name must start with capital letter
+shortcut : 
+
+functions : 2 type arrwo function
+		2) normal function
+	
+Header.jsx
+Content.jsx
+Footer.jsx	
+
