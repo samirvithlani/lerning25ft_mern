@@ -123,3 +123,6 @@ Header.jsx
 Content.jsx
 Footer.jsx	
 
+html : 3 inlinecss
+		1) internal css
+		2) external css
