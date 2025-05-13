@@ -126,3 +126,14 @@ Footer.jsx
 html : 3 inlinecss
 		1) internal css
 		2) external css
+
+
+react routing:
+index.html
+components: header footer contner...
+component urls:
+
+npm install react-router-dom
+<BrowserRouter></> : it will enable routing in react application : main.jsx
+<Routes></> : it will allow to wrap single routes in it..
+<Route></> : it helps to create url for components
