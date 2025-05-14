@@ -14,6 +14,7 @@ import { HotstarShows } from './components/hotstar/HotstarShows.jsx'
 import { Navbar } from './components/Navbar.jsx'
 import { HotstarHome } from './components/hotstar/HotstarHome.jsx'
 import { Error404 } from './components/Error404.jsx'
+import { PlayContent } from './components/hotstar/PlayContent.jsx'
 
 function App() {
   
@@ -26,6 +27,7 @@ function App() {
         <Route path='/' element = {<HotstarHome/>}></Route>
         <Route path='/movies' element = {<HotstarMovies/>}></Route>
         <Route path='/shows' element = {<HotstarShows/>}></Route>
+        <Route path='/playcontent/:id' element={<PlayContent/>}></Route>
         {/* <Route path='/*' element={<h1>404</h1>}></Route> */}
         <Route path='/*' element = {<Error404/>}></Route>
       </Routes>
