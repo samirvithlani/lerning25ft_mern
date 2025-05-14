@@ -137,3 +137,25 @@ npm install react-router-dom
 <BrowserRouter></> : it will enable routing in react application : main.jsx
 <Routes></> : it will allow to wrap single routes in it..
 <Route></> : it helps to create url for components
+
+
+react js hooks:
+function based compone : hooks
+hooks are function with extea faci....
+
+useState
+
+react js : Virtual DOM:
+
+DOM :-- html object update
+DOM -> light weigted copy -> VDOM
+
+component -> change --> vdom --> compre --> og dom ->
+
+hooks --> use prefix
+
+
+componnet --> file -->UseStateDemo1
+
+-->app.js route --> navbar li --> Link
+

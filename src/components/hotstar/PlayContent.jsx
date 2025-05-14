@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 export const PlayContent = () => {
 
     const id = useParams().id; //.id //.name
+    //{id:"urldata"}
 
   return (
     <div>
