@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { MyButton } from '../MyButton'
 
 export const HotstarMovies = () => {
 
@@ -14,9 +15,15 @@ export const HotstarMovies = () => {
     }
   ]
 
+  const playMovie = ()=>{
+    alert("playing movie...")
+  }
+
   return (
     <div style={{textAlign:"center"}}>
         <h1>HOTSTART MOVIES</h1>
+        <MyButton name ={"play"} class = "btn btn-warning" funName={playMovie}></MyButton>
+
         <ul>
           <li>
             <Link to="/playcontent/1001">Avatar</Link>

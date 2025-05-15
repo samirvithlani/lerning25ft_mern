@@ -167,7 +167,13 @@ there 3 ways to send data:
 props:
 props stand for properties:
 
+reusbale componet create...
 
+admin
+
+20 tables:
+
+reusbale:
 
 
 
