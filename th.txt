@@ -159,3 +159,18 @@ componnet --> file -->UseStateDemo1
 
 -->app.js route --> navbar li --> Link
 
+communicatoin between componnts:
+1 copmp : 2 comp
+
+there 3 ways to send data:
+
+props:
+props stand for properties:
+
+
+
+
+
+context
+redux
+

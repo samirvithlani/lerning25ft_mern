@@ -1,12 +1,15 @@
+import { button } from 'framer-motion/client'
 import React, { useState } from 'react'
 
 export const UseStateDemo4 = () => {
     const [user,setUser] =useState({id:101,name:"ram",age:24})
+    const [buttonCLicked, setbuttonCLicked] = useState(false)
     //user -->varible
     //setUser -->
-    const leap =() =>{
+    const leap =(year) =>{
         //setUser({id:101,name:"ram",age:25})
-        setUser({...user,age:user.age+1,child:1})
+        setUser({...user,age:user.age+year,child:1})
+        setbuttonCLicked(true)
     }
   return (
     <div style={{textAlign:"center"}}>
@@ -14,8 +17,11 @@ export const UseStateDemo4 = () => {
         <h1>Name = {user.name}</h1>
         <h2>Id = {user.id}</h2>
         <h3>age = {user.age}</h3>
-        <h4>child = {user.child}</h4>
-        <button onClick={()=>{leap()}}>1 yaer leap</button>
+        {
+            buttonCLicked == true &&<h4>child = {user.child}</h4>
+        }
+        
+        <button onClick={()=>{leap(2)}}>1 yaer leap</button>
     </div>
   )
 }

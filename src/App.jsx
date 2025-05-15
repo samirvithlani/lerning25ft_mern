@@ -20,12 +20,16 @@ import { UseStateDemo2 } from './components/UseStateDemo2.jsx'
 import { UseStateDemo3 } from './components/UseStateDemo3.jsx'
 import { ImageComponent } from './components/ImageComponent.jsx'
 import { UseStateDemo4 } from './components/UseStateDemo4.jsx'
+import { IPLHome } from './components/ipl/IPLHome.jsx'
 
 function App() {
+
+  var title = "React" //parent component --> app.js
   
   return (
    <div>
-    <Navbar></Navbar>
+    {/* //child component */}
+    <Navbar title ={title} ></Navbar> 
       <Routes>
         <Route path='/' element = {<HotstarHome/>}></Route>
         <Route path='/movies' element = {<HotstarMovies/>}></Route>
@@ -35,6 +39,7 @@ function App() {
         <Route path='/usestatedemo2' element = {<UseStateDemo2/>}></Route>
         <Route path='/usestatedemo3' element = {<UseStateDemo3/>}></Route>
         <Route path='/usestatedemo4' element = {<UseStateDemo4/>}></Route>
+        <Route path='/ipl' element = {<IPLHome/>}></Route>
         {/* <Route path='/*' element={<h1>404</h1>}></Route> */}
         <Route path='/*' element = {<Error404/>}></Route>
       </Routes>
