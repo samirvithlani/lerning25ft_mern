@@ -180,3 +180,22 @@ reusbale:
 context
 redux
 
+
+task:
+create component:
+receipe form:
+name:
+ingre:salt,suger,....
+cooking time:30
+
+output:
+recipe name:
+ingredient list:
+.salt
+.suger
+.
+.
+.
+cooking time: print : condition 30 min> red
+
+
