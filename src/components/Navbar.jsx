@@ -59,6 +59,13 @@ export const Navbar = (props) => {
                 IPL
               </Link>
             </li>
+            
+            
+            <li class="nav-item">
+              <Link class="nav-link" to="/inputhandling1">
+              inputhandling1
+              </Link>
+            </li>
           </ul>
         </div>
       </nav>

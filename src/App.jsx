@@ -21,6 +21,7 @@ import { UseStateDemo3 } from './components/UseStateDemo3.jsx'
 import { ImageComponent } from './components/ImageComponent.jsx'
 import { UseStateDemo4 } from './components/UseStateDemo4.jsx'
 import { IPLHome } from './components/ipl/IPLHome.jsx'
+import { InputHandleDemo1 } from './components/InputHandleDemo1.jsx'
 
 function App() {
 
@@ -40,6 +41,7 @@ function App() {
         <Route path='/usestatedemo3' element = {<UseStateDemo3/>}></Route>
         <Route path='/usestatedemo4' element = {<UseStateDemo4/>}></Route>
         <Route path='/ipl' element = {<IPLHome/>}></Route>
+        <Route path='/inputhandling1' element = {<InputHandleDemo1/>}></Route>
         {/* <Route path='/*' element={<h1>404</h1>}></Route> */}
         <Route path='/*' element = {<Error404/>}></Route>
       </Routes>
