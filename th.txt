@@ -199,3 +199,19 @@ ingredient list:
 cooking time: print : condition 30 min> red
 
 
+
+{
+	required:{
+		value:true,
+		message:"Age is required *"
+		}
+}
+
+{
+            required:{
+                value:true,
+                message:"Age is Required"
+            }
+}
+
+?. optional operator
