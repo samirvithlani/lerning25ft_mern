@@ -11,9 +11,12 @@
   },
   "dependencies": {
     "framer-motion": "^12.11.1",
+    "photo-sphere-viewer": "^4.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "^7.6.0"
+    "react-hook-form": "^7.56.4",
+    "react-router-dom": "^7.6.0",
+    "three": "^0.176.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.66",
