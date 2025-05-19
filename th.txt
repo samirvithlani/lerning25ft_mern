@@ -215,3 +215,13 @@ cooking time: print : condition 30 min> red
 }
 
 ?. optional operator
+
+
+product add form:
+productname
+price
+colors [checkbox]
+status [radio button]
+category[dropdown]
+
+all fields are required...

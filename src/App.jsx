@@ -25,6 +25,7 @@ import { InputHandleDemo1 } from './components/InputHandleDemo1.jsx'
 import { InputDemo2 } from './components/InputDemo2.jsx'
 import { FormDemo1 } from './components/form/FormDemo1.jsx'
 import { FormDemo2 } from './components/form/FormDemo2.jsx'
+import PanoramaCrossfade from './components/PanoramaCrossfade.jsx'
 
 function App() {
 
@@ -47,6 +48,8 @@ function App() {
         <Route path='/inputhandling1' element = {<InputHandleDemo1/>}></Route>
         <Route path='/inputhandling2' element = {<InputDemo2/>}></Route>
         <Route path='/formdemo1' element = {<FormDemo2/>}></Route>
+        <Route path ="/img" element = {<ImageComponent/>}></Route>
+
         {/* <Route path='/*' element={<h1>404</h1>}></Route> */}
         <Route path='/*' element = {<Error404/>}></Route>
       </Routes>
