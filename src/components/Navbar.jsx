@@ -81,6 +81,11 @@ export const Navbar = (props) => {
               form demo 3
               </Link>
             </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/formdemo4">
+              form demo 4
+              </Link>
+            </li>
             
             
           </ul>
