@@ -225,3 +225,13 @@ status [radio button]
 category[dropdown]
 
 all fields are required...
+
+
+grid -> creta -->onlcik gret --> random bom pos -->
+gameOver useState --> click == index == bombpo -->gameover
+
+
+{
+
+	gamevoer && index ==pmx "bomb"
+}

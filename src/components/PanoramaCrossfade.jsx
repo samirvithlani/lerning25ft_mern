@@ -18,7 +18,7 @@ const PanoramaCrossfade = () => {
 
   useEffect(() => {
     if (!containerRef.current) return;
-
+  
     const renderer = new THREE.WebGLRenderer({
       canvas: canvasRef.current,
       alpha: true,
@@ -27,10 +27,10 @@ const PanoramaCrossfade = () => {
       containerRef.current.clientWidth,
       containerRef.current.clientHeight
     );
-
+  
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0x000000);
-
+  
     const camera = new THREE.PerspectiveCamera(
       75,
       containerRef.current.clientWidth / containerRef.current.clientHeight,
@@ -38,26 +38,26 @@ const PanoramaCrossfade = () => {
       1500
     );
     camera.position.set(0, 0, 0.1);
-
-    const loader = new THREE.TextureLoader();
+  
+    // ✅ Use LoadingManager
+    const manager = new THREE.LoadingManager();
+    const loader = new THREE.TextureLoader(manager);
+  
     let textureBedroom, textureHall;
-    let texturesLoaded = 0;
-
-    const onTextureLoad = () => {
-      texturesLoaded++;
-      if (texturesLoaded === 2) {
-        setLoading(false);
-      }
+  
+    manager.onLoad = () => {
+      setLoading(false); // Hide loader after all textures are fully loaded
     };
-
-    textureBedroom = loader.load(bedroom, onTextureLoad);
-    textureHall = loader.load(hall, onTextureLoad);
-
+  
+    // This will ensure both are loaded before rendering starts
+    textureBedroom = loader.load(bedroom);
+    textureHall = loader.load(hall);
+  
     const geometry = new THREE.SphereGeometry(500, 60, 40);
     geometry.scale(-1, 1, 1);
-
+  
     const overlapDistance = 950;
-
+  
     const meshBedroom = new THREE.Mesh(
       geometry,
       new THREE.MeshBasicMaterial({
@@ -75,26 +75,26 @@ const PanoramaCrossfade = () => {
       })
     );
     meshHall.position.set(overlapDistance, 0, 0);
-
+  
     scene.add(meshBedroom);
     scene.add(meshHall);
-
+  
     containerRef.current.addEventListener("pointerdown", onPointerDown);
     containerRef.current.addEventListener("pointerup", onPointerUp);
     containerRef.current.addEventListener("pointermove", onPointerMove);
-
+  
     const easeInOutQuad = (t) =>
       t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
-
+  
     function onPointerDown(e) {
       isDraggingRef.current = true;
       prevMousePosRef.current = { x: e.clientX, y: e.clientY };
     }
-
+  
     function onPointerUp() {
       isDraggingRef.current = false;
     }
-
+  
     function onPointerMove(e) {
       if (!isDraggingRef.current) return;
       const deltaX = e.clientX - prevMousePosRef.current.x;
@@ -104,13 +104,13 @@ const PanoramaCrossfade = () => {
       latRef.current = Math.min(85, Math.max(-85, latRef.current));
       prevMousePosRef.current = { x: e.clientX, y: e.clientY };
     }
-
+  
     function animate() {
       requestAnimationFrame(animate);
-
+  
       const phi = THREE.MathUtils.degToRad(90 - latRef.current);
       const theta = THREE.MathUtils.degToRad(lonRef.current);
-
+  
       if (moving && progressRef.current < 1) {
         progressRef.current += 0.01;
         if (progressRef.current >= 1) {
@@ -118,27 +118,27 @@ const PanoramaCrossfade = () => {
           setMoving(false);
         }
       }
-
+  
       const easedProgress = easeInOutQuad(progressRef.current);
-
+  
       camera.position.x = overlapDistance * easedProgress;
       camera.position.y = 0;
       camera.position.z = 1;
-
+  
       const x = Math.sin(phi) * Math.cos(theta);
       const y = Math.cos(phi);
       const z = Math.sin(phi) * Math.sin(theta);
-
+  
       meshBedroom.material.opacity = 1 - easedProgress;
       meshHall.material.opacity = easedProgress;
-
+  
       camera.lookAt(camera.position.x + x, y, z);
-
+  
       renderer.render(scene, camera);
     }
-
-    animate(); // Start animation loop
-
+  
+    animate();
+  
     return () => {
       containerRef.current.removeEventListener("pointerdown", onPointerDown);
       containerRef.current.removeEventListener("pointerup", onPointerUp);
@@ -146,6 +146,7 @@ const PanoramaCrossfade = () => {
       renderer.dispose();
     };
   }, [moving]);
+  
 
   const goToHall = () => {
     if (!moving) {

@@ -23,7 +23,7 @@ export const Navbar = (props) => {
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
+            {/* <li class="nav-item active">
               <Link class="nav-link" to="/movies">
                 movies
               </Link>
@@ -86,7 +86,22 @@ export const Navbar = (props) => {
               form demo 4
               </Link>
             </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/usememo">
+              usememo
+              </Link>
+            </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/findbomb">
+              findbomb
+              </Link>
+            </li> */}
             
+            <li class="nav-item">
+              <Link class="nav-link" to="/apidemo1">
+              API DEMO 1
+              </Link>
+            </li>
             
           </ul>
         </div>

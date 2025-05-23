@@ -1,26 +1,25 @@
-import React, { useState } from 'react'
+import React, { useMemo, useState } from 'react'
 
 export const UseMemoDemo2 = () => {
-    const [fruits, setfruits] = useState(["apple","banana","watermelon","litchi","mango","kiwi"])
-    const [query, setquery] = useState("")
+    //const [fruits, setfruits] = useState(["apple","banana","watermelon","litchi","mango","kiwi"])
+    const fruits = useMemo(()=>["apple","banana","watermelon","litchi","mango","kiwi"],[])
+    const [query, setquery] = useState("") //cmponent...
+    
     const searchFruit =(event)=>{
-        console.log(event.target.value) //w
-        //a
-        var filtFruits = fruits.filter((f)=>{
-            return f.includes(event.target.value)
-        })
-        //["",""]
-        console.log(filtFruits)
-        setfruits(filtFruits)
-
+        
+        setquery(event.target.value) //w
     }
+
+    const filterFruits = fruits.filter((f)=>{
+        return f.includes(query) //""
+    })
   return (
     <div style={{textAlign:"center"}}>
         <h1>USE MEMO DEMO 2</h1>
         
         <input type='text' placeholder='search' onChange={(event)=>{searchFruit(event)}} ></input>
         {
-            fruits.map((f)=>{
+            filterFruits.map((f)=>{
                 return <li>{f}</li>
             })
         }
