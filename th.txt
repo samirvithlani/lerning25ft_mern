@@ -235,3 +235,8 @@ gameOver useState --> click == index == bombpo -->gameover
 
 	gamevoer && index ==pmx "bomb"
 }
+
+useEffect  : to handle side effects in react js we can use useEffect hook
+chat application: 
+x -->user --> y user
+
