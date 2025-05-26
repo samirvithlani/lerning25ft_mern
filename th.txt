@@ -240,3 +240,25 @@ useEffect  : to handle side effects in react js we can use useEffect hook
 chat application: 
 x -->user --> y user
 
+GETAPIDEMO5
+
+TASK:
+FORM :
+post api url :https://node5.onrender.com/product/create
+params
+ {
+      "colors": [],
+      "isAvailable": true,
+      "unit": 0,
+      "name": "ipad mini",
+      "price": 20000,
+      "description": "Na levai"
+},
+
+
+after data added succssufully : display toster
+//check status code at your own.. [console response...print..] 
+
+GETAPIDEMO4
+GET:
+https://node5.onrender.com/product/getall
