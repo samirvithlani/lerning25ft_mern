@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Loader } from '../Loader'
 
 
@@ -9,6 +9,11 @@ export const ApiDemo1 = () => {
     const [message, setmessage] = useState("")
     const [users, setusers] = useState([])
     const [isLoading, setisLoading] = useState(false)
+
+    useEffect(() => {
+        getUserData()
+    }, [])
+    
     const getUserData = async()=>{
 
         setisLoading(true)
@@ -28,7 +33,7 @@ export const ApiDemo1 = () => {
         {
             isLoading && <Loader/>
         }
-        <button onClick={()=>{getUserData()}}>GET</button>
+        {/* <button onClick={()=>{getUserData()}}>GET</button> */}
         {message}
        <table className='table table-dark'>
         <thead>
