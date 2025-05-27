@@ -37,6 +37,7 @@ import { ApiDemo1 } from './components/api/ApiDemo1.jsx'
 import { UseEffectDemo } from './components/UseEffectDemo.jsx'
 import { ApiDemo2 } from './components/api/ApiDemo2.jsx'
 import { ApiDemo3 } from './components/api/ApiDemo3.jsx'
+import { ApiDemo11 } from './components/api/ApiDemo11.jsx'
 
 
 
@@ -67,6 +68,7 @@ function App() {
         <Route path='/findbomb' element = {<FindBomb/>}></Route>
         <Route path='/img' element = {<PanoramaViewer/>}></Route>
         <Route path='/apidemo1' element = {<ApiDemo1/>}></Route>
+        <Route path='/apidemo11' element = {<ApiDemo11/>}></Route>
         <Route path='/apidemo2' element = {<ApiDemo2/>}></Route>
         <Route path='/useeffectdemo' element = {<UseEffectDemo/>} ></Route>
         <Route path='/apidemo3' element = {<ApiDemo3/>}></Route>
