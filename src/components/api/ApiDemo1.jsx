@@ -1,6 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Loader } from '../Loader'
+import { toast, ToastContainer,Bounce } from 'react-toastify'
 
 
 
@@ -9,6 +10,7 @@ export const ApiDemo1 = () => {
     const [message, setmessage] = useState("")
     const [users, setusers] = useState([])
     const [isLoading, setisLoading] = useState(false)
+    
 
     useEffect(() => {
         getUserData()
@@ -27,8 +29,34 @@ export const ApiDemo1 = () => {
         setusers(res.data.data)
         setisLoading(false)
     }
+
+    const deleteUser = async(id)=>{
+        //delete api call....
+        //const res = await axios.delete("https://node5.onrender.com/user/user/"+id)
+        const res = await axios.delete(`https://node5.onrender.com/user/user/${id}`)
+        console.log(res)
+        if(res.status == 204){
+            toast.success("record deleted...")
+            getUserData()
+        }
+    }
+
+
   return (
     <div style={{textAlign:"center"}}>
+         <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        transition={Bounce}
+      />
         <h1>API DEMO 1</h1>
         {
             isLoading && <Loader/>
@@ -43,6 +71,7 @@ export const ApiDemo1 = () => {
                 <th>AGE</th>
                 <th>EMAIL</th>
                 <th>STATUS</th>
+                <th>Action</th>
             </tr>
         </thead>
         <tbody>
@@ -54,6 +83,9 @@ export const ApiDemo1 = () => {
                         <td>{user.age}</td>
                         <td>{user.email}</td>
                         <td>{user.isActive ? "Active" :"NOt Active"}</td>
+                        <td>
+                            <button onClick={()=>{deleteUser(user._id)}} className='btn btn-danger'>DELETE</button>
+                        </td>
                     </tr>
                 })
             }
