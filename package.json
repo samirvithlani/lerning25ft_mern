@@ -11,11 +11,13 @@
   },
   "dependencies": {
     "axios": "^1.9.0",
+    "bootstrap": "^5.3.6",
     "framer-motion": "^12.11.1",
     "gsap": "^3.13.0",
     "panolens": "^0.12.1",
     "photo-sphere-viewer": "^4.8.1",
     "react": "^18.2.0",
+    "react-bootstrap": "^2.10.10",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.56.4",
     "react-router-dom": "^7.6.0",
