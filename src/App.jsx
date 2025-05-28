@@ -38,6 +38,7 @@ import { UseEffectDemo } from './components/UseEffectDemo.jsx'
 import { ApiDemo2 } from './components/api/ApiDemo2.jsx'
 import { ApiDemo3 } from './components/api/ApiDemo3.jsx'
 import { ApiDemo11 } from './components/api/ApiDemo11.jsx'
+import { FormDemo5 } from './components/form/FormDemo5.jsx'
 
 
 
@@ -64,6 +65,7 @@ function App() {
         <Route path='/formdemo1' element = {<FormDemo2/>}></Route>
         <Route path='/formdemo3' element = {<FormDemo3/>}></Route>
         <Route path='/formdemo4' element = {<FormDemo4/>}></Route>
+        <Route path='/formdemo5' element = {<FormDemo5/>}></Route>
         <Route path='/usememo' element = {<UseMemoDemo2/>}></Route>
         <Route path='/findbomb' element = {<FindBomb/>}></Route>
         <Route path='/img' element = {<PanoramaViewer/>}></Route>

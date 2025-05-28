@@ -7,6 +7,10 @@ export const ApiDemo11 = () => {
     console.log(data)
     console.log(loding)
 
+    // const delete(){
+    //     const {data,loding} =useFetchApi("https://node5.onrender.com/product/getall")
+    // }
+
   return (
     <div>
         <h1>API DEMO 11</h1>
