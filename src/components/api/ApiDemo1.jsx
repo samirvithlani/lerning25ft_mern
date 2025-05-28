@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { Loader } from "../Loader";
 import { toast, ToastContainer, Bounce } from "react-toastify";
 import { Button, Modal } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export const ApiDemo1 = () => {
   //axios
@@ -103,6 +104,7 @@ export const ApiDemo1 = () => {
                     DELETE
                   </button>
                   <button onClick={()=>{getUserDetail(user._id)}} className="btn btn-info">DETAIL</button>
+                  <Link to={`/updateuser/${user._id}`} className="btn btn-warning">UPDATE</Link>
                 </td>
               </tr>
             );

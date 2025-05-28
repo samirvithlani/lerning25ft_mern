@@ -262,3 +262,8 @@ after data added succssufully : display toster
 GETAPIDEMO4
 GET:
 https://node5.onrender.com/product/getall
+https://node5.onrender.com/product/addproducts
+
+
+edit : --> new component -->form display -->user edit --> old data ->form fill
+edit --> update[submit]
