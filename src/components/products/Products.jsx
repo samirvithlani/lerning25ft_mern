@@ -28,11 +28,33 @@ export const Products = () => {
         var x = products.filter((prod)=>prod.id !== id)
         setproducts(x)
     }
+    const updateUser= (id)=>{
+
+    }
+    const filterUser = (data)=>{
+
+    }
+
+
+    const productDispatcher =(action,payload)=>{
+
+        switch(action){
+            case "DELETE_PRODUCT":
+                var x = products.filter((prod)=>prod.id !== payload)
+                    setproducts(x)
+                break;
+            case "UPDATE_PRODUCT":
+                alert(payload)
+                break;    
+        }
+    }
+
+
 
   return (
     <div style={{textAlign:"center"}}>
         <h1>PRODUCT COMPONENT[parent component]</h1>
-        <ProductContext.Provider value={{products,title,deleteUser}}>
+        <ProductContext.Provider value={{products,title,deleteUser,productDispatcher}}>
             <ProductList></ProductList>
         </ProductContext.Provider>
     </div>

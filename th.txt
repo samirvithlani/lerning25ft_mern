@@ -280,3 +280,18 @@ https://node5.onrender.com/product/addproducts
 
 edit : --> new component -->form display -->user edit --> old data ->form fill
 edit --> update[submit]
+
+
+
+TASK: context task:
+
+songs ---> {id,name,artist,thumbnail} [parent]
+songList ---> display [child]
+playlist 1 --> [subchile]
+
+select button  --> playlist add..
+
+hint:
+
+playlist usearsre: click add to playlist ->pusg
+
