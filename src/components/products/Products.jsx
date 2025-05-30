@@ -22,10 +22,17 @@ export const Products = () => {
         }
     ])
     var title ="CONTEXT"
+
+    const deleteUser = (id)=>{
+        //filter...
+        var x = products.filter((prod)=>prod.id !== id)
+        setproducts(x)
+    }
+
   return (
     <div style={{textAlign:"center"}}>
         <h1>PRODUCT COMPONENT[parent component]</h1>
-        <ProductContext.Provider value={{products,title}}>
+        <ProductContext.Provider value={{products,title,deleteUser}}>
             <ProductList></ProductList>
         </ProductContext.Provider>
     </div>

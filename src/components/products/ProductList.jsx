@@ -3,7 +3,7 @@ import { ProductContext } from './ProductContext'
 import { ProductSubList } from './ProductSubList'
 
 export const ProductList = () => {
-    const {products} = useContext(ProductContext)
+    const {products,deleteUser} = useContext(ProductContext)
   return (
     <div>
         <h1>ProductList</h1>
@@ -13,6 +13,7 @@ export const ProductList = () => {
                     <th>ID</th>
                     <th>NAME</th>
                     <th>PRICE</th>
+                    <th>ACTION</th>
                 </tr>
             </thead>
             <tbody>
@@ -22,6 +23,9 @@ export const ProductList = () => {
                             <td>{prod.id}</td>
                             <td>{prod.name}</td>
                             <td>{prod.price}</td>
+                            <td>
+                                <button onClick={()=>{deleteUser(prod.id)}} className='btn btn-danger'>DELETE</button>
+                                </td>
                         </tr>
                     })
                 }
