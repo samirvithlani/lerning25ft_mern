@@ -40,6 +40,7 @@ import { ApiDemo3 } from './components/api/ApiDemo3.jsx'
 import { ApiDemo11 } from './components/api/ApiDemo11.jsx'
 import { FormDemo5 } from './components/form/FormDemo5.jsx'
 import { UpdateUser } from './components/api/UpdateUser.jsx'
+import { Products } from './components/products/Products.jsx'
 
 
 
@@ -76,6 +77,7 @@ function App() {
         <Route path='/useeffectdemo' element = {<UseEffectDemo/>} ></Route>
         <Route path='/apidemo3' element = {<ApiDemo3/>}></Route>
         <Route path='/updateuser/:id' element = {<UpdateUser/>}></Route>
+        <Route path="/products" element = {<Products/>}></Route>
 
 
         {/* <Route path='/*' element={<h1>404</h1>}></Route> */}

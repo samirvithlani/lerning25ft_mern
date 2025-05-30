@@ -175,9 +175,22 @@ admin
 
 reusbale:
 
+props:
+		a -->b  -->c -->d
+
+		a-->b -->c-->d
+
+		props drilling:
 
 
 context
+
+	pipeline: 
+	parent child --> child --> most child
+
+	useContext:
+
+
 redux
 
 
