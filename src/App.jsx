@@ -45,6 +45,7 @@ import { ProductData } from './components/products/ProductData.jsx'
 import { Login } from './components/Login.jsx'
 import { ToastContainer,Bounce } from 'react-toastify'
 import ProtectedRoutes from './hooks/ProtectedRoutes.jsx'
+import { ApiDemo4 } from './components/api/ApiDemo4.jsx'
 
 
 
@@ -75,7 +76,7 @@ function App() {
         <Route path='/usememo' element = {<UseMemoDemo2/>}></Route>
         <Route path='/findbomb' element = {<FindBomb/>}></Route>
         <Route path='/img' element = {<PanoramaViewer/>}></Route>
-
+      <Route path='/apidemo4' element = {<ApiDemo4/>}></Route>
         <Route element ={<ProtectedRoutes/>}>
           <Route path='/apidemo1' element = {<ApiDemo1/>}></Route>
           <Route path='/apidemo11' element = {<ApiDemo11/>}></Route>
