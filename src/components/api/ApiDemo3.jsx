@@ -53,6 +53,10 @@ export const ApiDemo3 = () => {
           <input type="text" {...register("email")}></input>
         </div>
         <div>
+          <label>PASSWORD</label>
+          <input type="text" {...register("password")}></input>
+        </div>
+        <div>
           <label>Status</label>
           <br></br>
           ACTIVE :{" "}

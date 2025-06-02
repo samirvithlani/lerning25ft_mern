@@ -42,6 +42,9 @@ import { FormDemo5 } from './components/form/FormDemo5.jsx'
 import { UpdateUser } from './components/api/UpdateUser.jsx'
 import { Products } from './components/products/Products.jsx'
 import { ProductData } from './components/products/ProductData.jsx'
+import { Login } from './components/Login.jsx'
+import { ToastContainer,Bounce } from 'react-toastify'
+import ProtectedRoutes from './hooks/ProtectedRoutes.jsx'
 
 
 
@@ -72,19 +75,36 @@ function App() {
         <Route path='/usememo' element = {<UseMemoDemo2/>}></Route>
         <Route path='/findbomb' element = {<FindBomb/>}></Route>
         <Route path='/img' element = {<PanoramaViewer/>}></Route>
-        <Route path='/apidemo1' element = {<ApiDemo1/>}></Route>
-        <Route path='/apidemo11' element = {<ApiDemo11/>}></Route>
-        <Route path='/apidemo2' element = {<ApiDemo2/>}></Route>
-        <Route path='/useeffectdemo' element = {<UseEffectDemo/>} ></Route>
-        <Route path='/apidemo3' element = {<ApiDemo3/>}></Route>
-        <Route path='/updateuser/:id' element = {<UpdateUser/>}></Route>
-        <Route path="/products" element = {<Products/>}></Route>
-        <Route path='/productData' element = {<ProductData/>}></Route>
 
+        <Route element ={<ProtectedRoutes/>}>
+          <Route path='/apidemo1' element = {<ApiDemo1/>}></Route>
+          <Route path='/apidemo11' element = {<ApiDemo11/>}></Route>
+          <Route path='/apidemo2' element = {<ApiDemo2/>}></Route>
+          <Route path='/useeffectdemo' element = {<UseEffectDemo/>} ></Route>
+          <Route path='/apidemo3' element = {<ApiDemo3/>}></Route>
+          <Route path='/updateuser/:id' element = {<UpdateUser/>}></Route>
+          <Route path="/products" element = {<Products/>}></Route>
+          <Route path='/productData' element = {<ProductData/>}></Route>
+        </Route>
 
+        <Route path='/login' element = {<Login/>}></Route>
         {/* <Route path='/*' element={<h1>404</h1>}></Route> */}
         <Route path='/*' element = {<Error404/>}></Route>
       </Routes>
+
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+        transition={Bounce}
+      />
    </div>
   )
 }
