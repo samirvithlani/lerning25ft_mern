@@ -46,6 +46,7 @@ import { Login } from './components/Login.jsx'
 import { ToastContainer,Bounce } from 'react-toastify'
 import ProtectedRoutes from './hooks/ProtectedRoutes.jsx'
 import { ApiDemo4 } from './components/api/ApiDemo4.jsx'
+import { ReduxProductDataList } from './components/ReduxProductList.jsx'
 
 
 
@@ -85,7 +86,7 @@ function App() {
           <Route path='/apidemo3' element = {<ApiDemo3/>}></Route>
           <Route path='/updateuser/:id' element = {<UpdateUser/>}></Route>
           <Route path="/products" element = {<Products/>}></Route>
-          <Route path='/productData' element = {<ProductData/>}></Route>
+          <Route path='/productData' element = {<ReduxProductDataList/>}></Route>
         </Route>
 
         <Route path='/login' element = {<Login/>}></Route>

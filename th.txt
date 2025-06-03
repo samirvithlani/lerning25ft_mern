@@ -299,3 +299,35 @@ default component --> all users
 
 apidemo11 -->userlist --> input type seatch -- onCHange --> function -->s
 -->data -> orignal replace
+
+REDUX:
+
+props ,context
+props a -->b -->c drilling
+contex: a --> b,c,d,z
+
+[navabar] -->
+product
+
+
+state management tool:redux
+global state :
+
+
+factory [product man] ---[warehouse]---> market[]
+
+redux:
+action: 
+action is plain object which has a type and payload
+reducer:
+reducer is a pure function which takes the current state and action as arguments
+and returns a new state
+store:
+store is a single source of truth which holds the state of the application
+
+npm install @reduxjs/toolkit
+npm install react-redux
+
+server start --> store -->reducers load memory --> reducer [actions ->state -->cart object [] memory]
+
+
