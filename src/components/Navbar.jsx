@@ -1,8 +1,14 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 //props ->object ->{title:"React"}
 export const Navbar = (props) => {
+
+  //const state = useSelector((state)=>state)
+  //state.reducerName.objectname
+  const cart = useSelector((state)=>state.cart.cart)
+  console.log("state....",cart)
   return (
     <div>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -150,6 +156,16 @@ export const Navbar = (props) => {
               </Link>
             </li>
             
+            <li class="nav-item">
+              <Link class="nav-link" to="/heatmap">
+              heatmap
+              </Link>
+            </li>
+            
+            
+            <li class="nav-item">
+              <h1 style={{color:"vlue"}}>{cart.length}</h1>
+            </li>
           </ul>
         </div>
       </nav>
