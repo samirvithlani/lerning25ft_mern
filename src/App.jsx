@@ -48,6 +48,7 @@ import ProtectedRoutes from './hooks/ProtectedRoutes.jsx'
 import { ApiDemo4 } from './components/api/ApiDemo4.jsx'
 import { ReduxProductDataList } from './components/ReduxProductList.jsx'
 import HeatMapOverImage from './components/HeatMapOverImage.jsx'
+import { BankComponent } from './components/BankComponent.jsx'
 
 
 
@@ -88,7 +89,7 @@ function App() {
           <Route path='/updateuser/:id' element = {<UpdateUser/>}></Route>
           <Route path="/products" element = {<Products/>}></Route>
           <Route path='/productData' element = {<ReduxProductDataList/>}></Route>
-          <Route path='/heatmap' element ={<HeatMapOverImage/>}></Route>
+          <Route path='/bankcomp' element = {<BankComponent/>}></Route>
         </Route>
 
         <Route path='/login' element = {<Login/>}></Route>

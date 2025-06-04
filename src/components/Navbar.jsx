@@ -9,6 +9,8 @@ export const Navbar = (props) => {
   //state.reducerName.objectname
   const cart = useSelector((state)=>state.cart.cart)
   console.log("state....",cart)
+  //const bank = useSelector((state)=>state.bank.balance)
+  const bank = useSelector((state)=>state.bank) //{amount:100000}
   return (
     <div>
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -149,6 +151,12 @@ export const Navbar = (props) => {
               productData
               </Link>
             </li>
+                        
+            <li class="nav-item">
+              <Link class="nav-link" to="/bankcomp">
+              BANK
+              </Link>
+            </li>
             
             <li class="nav-item">
               <Link class="nav-link" to="/login">
@@ -156,15 +164,13 @@ export const Navbar = (props) => {
               </Link>
             </li>
             
-            <li class="nav-item">
-              <Link class="nav-link" to="/heatmap">
-              heatmap
-              </Link>
-            </li>
             
             
             <li class="nav-item">
               <h1 style={{color:"vlue"}}>{cart.length}</h1>
+            </li>
+            <li class="nav-item">
+              <h5 style={{color:"vlue"}}>BALANCE ={bank.balance}</h5>
             </li>
           </ul>
         </div>
