@@ -49,6 +49,7 @@ import { ApiDemo4 } from './components/api/ApiDemo4.jsx'
 import { ReduxProductDataList } from './components/ReduxProductList.jsx'
 import HeatMapOverImage from './components/HeatMapOverImage.jsx'
 import { BankComponent } from './components/BankComponent.jsx'
+import { MuiButton } from './mui/MuiButton.jsx'
 
 
 
@@ -90,6 +91,7 @@ function App() {
           <Route path="/products" element = {<Products/>}></Route>
           <Route path='/productData' element = {<ReduxProductDataList/>}></Route>
           <Route path='/bankcomp' element = {<BankComponent/>}></Route>
+          <Route path = "/mui/button" element = {<MuiButton/>}></Route>
         </Route>
 
         <Route path='/login' element = {<Login/>}></Route>

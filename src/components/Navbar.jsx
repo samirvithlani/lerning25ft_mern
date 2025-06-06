@@ -157,6 +157,11 @@ export const Navbar = (props) => {
               BANK
               </Link>
             </li>
+            <li class="nav-item">
+              <Link class="nav-link" to="/mui/button">
+              BUTTON
+              </Link>
+            </li>
             
             <li class="nav-item">
               <Link class="nav-link" to="/login">

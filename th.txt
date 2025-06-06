@@ -330,4 +330,24 @@ npm install react-redux
 
 server start --> store -->reducers load memory --> reducer [actions ->state -->cart object [] memory]
 
+RATING BAR:
+5 star
+1 star: poor
+2 star : .
+3..
 
+slider:
+component: products array : [] --> id name price qty:
+
+slider price ------------------------
+slider 100 --> 0 to 100 price
+slider 500 --> 0 10 500
+table product display
+
+switch:
+redux theme: dark and light:
+navbar switch
+theme slice : initial state mode :'light' --> toogle - mode ? light--dark --> light
+
+CREATE DASHBOARD USING MUI
+grid box  mui theme colors
